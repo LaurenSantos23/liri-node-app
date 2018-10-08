@@ -12,7 +12,7 @@ LIRI uses the following NPM Packages and API's:
 
 
 ### To See My App in Action
-
+- You would need valid user id's and keys for the Bands in Town API, Spotify and OMDB. Also a keys.js file to store them in.
 - Clone This Repo on local computer and have node.js installed also
 - Use command "npm i spotify", "npm i moment" "npm i request" "npm i dotenv" in your preferred command line terminal
 - Use command "node liri.js" and one of the given commands below
