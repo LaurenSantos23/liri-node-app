@@ -13,10 +13,10 @@ LIRI uses the following NPM Packages:
 
 ### To See My App in Action
 
--Clone This Repo on local computer and have node.js installed
--Use command "npm i spotify", "npm i moment" "npm i request" "npm i dotenv" in your preferred command line terminal
--Use command "node liri.js" and one of the given commands below
--Watch the Magic
+- Clone This Repo on local computer and have node.js installed also
+- Use command "npm i spotify", "npm i moment" "npm i request" "npm i dotenv" in your preferred command line terminal
+- Use command "node liri.js" and one of the given commands below
+- Watch the Magic!
 
   
 ### LIRI Commands
