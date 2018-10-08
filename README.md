@@ -28,10 +28,10 @@ In the command line, you would type: node liri.js and any of the four following 
  
   
  ### What each Command Does
- - `node liri.js concert-this <artist/band name here>` 
- - `node liri.js spotify-this-song <song name here>'
- - `node liri.js movie-this <movie name here>'
- - `node liri.js do-what-it-says`
+ - node liri.js concert-this <artist/band name here> 
+ - node liri.js spotify-this-song <song name here>
+ - node liri.js movie-this <movie name here>
+ - node liri.js do-what-it-says
  
   
     
