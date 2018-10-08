@@ -23,13 +23,13 @@ LIRI uses the following NPM Packages
   
  <p> In the command line, you would type: node liri.js and any of the four following commands:<p>
   <ul>
-    <li>1. concert-this <artist/band name here> </li>
+    <li>concert-this <artist/band name here> </li>
   
-   <li>2. spotify-this-song <song name here></li>
+   <li>spotify-this-song <song name here></li>
   
- <li>3. movie-this</li>
+ <li> movie-this</li>
   
- <li> 4.do-what-it-says </li>
+ <li>do-what-it-says </li>
   
  ### What each Command Does
   
