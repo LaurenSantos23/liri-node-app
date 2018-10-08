@@ -21,10 +21,10 @@ LIRI uses the following NPM Packages:
   
 ### LIRI Commands
 In the command line, you would type: node liri.js and any of the four following commands:
--concert-this <artist/band name here> 
--spotify-this-song <song name here>
--movie-this
--do-what-it-says
+- concert-this <artist/band name here> 
+- spotify-this-song <song name here>
+- movie-this
+- do-what-it-says
  
   
  ### What each Command Does
