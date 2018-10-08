@@ -1,14 +1,14 @@
 # liri-node-app
-<h1>Overview<h1>
+<h2>Overview<h2>
 
-LIRI is a Language Interpretation and Recognition Interface. LIRI is a command line node app that takes in parameters and gives you back data.
+<p>LIRI is a Language Interpretation and Recognition Interface. LIRI is a command line node app that takes in parameters and gives you back data.<p>
 
-<h2>LIRI uses the following NPM Packages<h2>
+<h3>LIRI uses the following NPM Packages<h3>
 <ul>
 <li>Bands in Town<li>
 <li><a href="https://www.npmjs.com/package/spotify" rel="link">Spotify API</a><li>
-<li>OMDB API<li>
-<li>Request<li>
-<li>Moment<li>
-<li>DOTENV<li>
+<li><a href="https://www.npmjs.com/package/request" rel="nofollow">Request</a><li>
+<li><a href="https://www.npmjs.com/package/request" rel="link">Request</a><li>
+<li><a href="https://www.npmjs.com/package/moment" rel="link"> Moment<li>
+<li><a href="https://www.npmjs.com/package/dotenv" rel="link">DOTENV<li>
 <ul>
