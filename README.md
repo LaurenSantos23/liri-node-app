@@ -23,7 +23,7 @@ LIRI uses the following NPM Packages:
 In the command line, you would type: node liri.js and any of the four following commands:
 - concert-this <artist/band name here> 
 - spotify-this-song <song name here>
-- movie-this
+- movie-this <movie name here>
 - do-what-it-says
  
   
