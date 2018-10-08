@@ -12,28 +12,26 @@ LIRI uses the following NPM Packages
 <ul>
 
 ### To See My App in Action
-<ul>
-<li>Clone This Repo on local computer and have node.js installed</li>
-<li>Use command "npm i spotify", "npm i moment" "npm i request" "npm i dotenv" in your preferred command line terminal</li>
-<li>Use command "node liri.js" and one of the given commands below</li>
-<li>Watch the Magic!</li>
-<ul>
+
+-Clone This Repo on local computer and have node.js installed
+-Use command "npm i spotify", "npm i moment" "npm i request" "npm i dotenv" in your preferred command line terminal
+-Use command "node liri.js" and one of the given commands below
+-Watch the Magic
+
   
 ### LIRI Commands
 In the command line, you would type: node liri.js and any of the four following commands:
-<ul>
- <li>concert-this <artist/band name here> </li>
-  <li>spotify-this-song <song name here></li>
-  <li> movie-this</li>
-  <li>do-what-it-says </li>
-  </ul>
+-concert-this <artist/band name here> 
+-spotify-this-song <song name here>
+-movie-this
+-do-what-it-says
+ 
   
  ### What each Command Does
- 1. `node liri.js concert-this <artist/band name here>` 
- 
- 2. `node liri.js spotify-this-song '<song name here>'
- 3. `node liri.js movie-this '<movie name here>'
- 4. `node liri.js do-what-it-says`
+ - `node liri.js concert-this <artist/band name here>` 
+ - `node liri.js spotify-this-song '<song name here>'
+ - `node liri.js movie-this '<movie name here>'
+ - `node liri.js do-what-it-says`
  
   
     
