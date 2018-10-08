@@ -29,7 +29,10 @@ In the command line, you would type: node liri.js and any of the four following 
   ### What Each Command Should Do
 1. `node liri.js concert-this <artist/band name here>`
 
-	* This will search the Bands in Town API for an artist and returns: Name of Venue, Location and Date of Concert
+	* This will search the Bands in Town API for an artist and returns: 
+		* Name of Venue
+		* Location 
+		* Date of Concert
 
 2. `node liri.js spotify-this-song '<song name here>'`
 
