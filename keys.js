@@ -9,3 +9,6 @@ exports.omdb = {
   key:process.env.OMDB_API_Key
 };
 
+exports.bandsInTown = {
+  queryURL: "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"
+}

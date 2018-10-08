@@ -1,18 +1,66 @@
+// requiring the dotenv npm (my )
 require("dotenv").config();
+// Grab data from key.js
+var keys = require("./keys");
+// requiring request npm
+var request = require("request");
+//requiring spotify npm
+var Spotify = require('node-spotify-api'); //saying could not find a declaration file but my spotify works when i do node liri.js
+// requiring omdb 
+var omdb = require("omdb");
+// requring bands in town
+var bandsInTown = require("bandsInTown")
 
-var keys = require("./keys")
+// code to access keys information 
+var spotify = new Spotify(keys.spotify);
 
-var Spotify = require('node-spotify-api');
+// Liri uses command line prompts (CLI) to take in parameters (song, bands or movies) and gives back data from our api requests and npm packages
+
+//make it so liri.js can take in one of the following commands 
+
+// * `concert-this`
+
+// * `spotify-this-song`
+
+// * `movie-this`
+
+// * `do-what-it-says`
+
+
+
 
  
- var spotify = new Spotify(keys.spotify);
- 
- spotify.search({ type: 'track', query: 'All the Small Things' }, function(err, data) {
-   if (err) {
-    return console.log('Error occurred: ' + err);
-   }
- 
-    console.log(data.tracks.items[0].album.artists[0]); 
- }); 
 
- //process.argv[2] example to (can help to grab spotify songs) store to var and console log to see it work
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ //  spotify.search({ type: 'track', query: 'All the Small Things' }, function(err, data) {
+//    if (err) {
+//     return console.log('Error occurred: ' + err);
+//    }
+ 
+//     console.log(data.tracks.items[0].album.artists[0]); 
+//  }); 
+
+//  process.argv[2] (example to (can help to grab spotify songs) store to var and console log to see it work)
