@@ -68,7 +68,7 @@ In the command line, you would type: node liri.js and any of the four following 
 		* It should run `spotify-this-song` for "I Want it That Way," as follows the text in `random.txt`.
 
 ### Contributors
-Lauren Santosuosso <a href="https://github.com/LaurenSantos23">Lauren Santosuosso/Github</a>
+<a href="https://github.com/LaurenSantos23">Lauren Santosuosso/Github</a>
 	
  
   
