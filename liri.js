@@ -12,7 +12,12 @@ var omdb = require("omdb");
 var bandsInTown = require("bandsInTown")
 
 // code to access keys information 
+//made constructiors for my api calls
 var spotify = new Spotify(keys.spotify);
+var omdb = new Omdb(keys.omdb);
+var bandsInTown = new BandsInTown(keys.bandsInTown);
+
+//figure out why my node_modules file showed up in my git hub even though I used the .env file to ignore it
 
 // Liri uses command line prompts (CLI) to take in parameters (song, bands or movies) and gives back data from our api requests and npm packages
 
@@ -25,6 +30,8 @@ var spotify = new Spotify(keys.spotify);
 // * `movie-this`
 
 // * `do-what-it-says`
+
+//Spotify 
 
 
 
