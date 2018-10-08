@@ -27,7 +27,13 @@ In the command line, you would type: node liri.js and any of the four following 
   <li> movie-this</li>
   <li>do-what-it-says </li>
   </ul>
- ### What each Command Does
   
+ ### What each Command Does
+ 1. `node liri.js concert-this <artist/band name here>` 
+ 
+ 2. `node liri.js spotify-this-song '<song name here>'
+ 3. `node liri.js movie-this '<movie name here>'
+ 4. `node liri.js do-what-it-says`
+ 
   
     
