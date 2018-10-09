@@ -5,28 +5,23 @@ var keys = require("./keys");
 var request = require("request");
 var Spotify = require('node-spotify-api');
 var bandsInTown = require("mhs-bandsintown");
-let moment = require("moment");
+var moment = require("moment");
 var fs = require("fs"); //reads and writes files
+
+
 
 // code to access keys information 
 var spotify = new Spotify(keys.spotify);
-// var omdb = new Omdb(keys.omdb);
-//var bandsInTown = new BandsInTown(keys.bandsInTown);
+var omdbUrl = 'http://www.omdbapi.com/?apikey=trilogy&t=';
+var bandsUrlBase = 'https://rest.bandsintown.com/artists/';
+var bandsUrlEnd = '/events?app_id=codingbootcamp';
 
 
-// Possible commands for this liri app
 
-//figure out why my node_modules file showed up in my git hub even though I used the .env file to ignore it
 
-//Spotify 
 
-//    spotify.search({ type: 'track', query: 'All the Small Things' }, function(err, data) {
-//    if (err) {
-//      return console.log('Error occurred: ' + err);
-//     }
- 
-//     console.log(data.tracks.items[0].album.artists[0]); 
-//  }); 
+
+
 
 
 
