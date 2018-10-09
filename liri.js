@@ -30,7 +30,8 @@ for (var i=3; i<nodeArgv.length; i++){
   }
 }
 
-//switch case
+//switch case 
+//this allows to switch between the four given commands 
 switch(command){
   case "concert-this":
   if(x){
