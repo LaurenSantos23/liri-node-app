@@ -71,19 +71,21 @@ In the command line, you would type: node liri.js and any of the four following 
 
 * Example for spotify-this-song 'Heartbreak Hotel' (Working)
 
-![Screenshot](spotify-this-song.png)
+![Spotify This Song Screenshot](img/spotify-this-song.png)
 
 * Example for movie-this (Working)'
 
-![Screenshot](movie-this-working.png)
+![Movie This Screenshot](img/movie-this-working.png)
 
 * Example for movie-this with no text entered (Working)
 
-![Screenshot](movie-this-mr-nobody.png)
+![Movie This Default Screenshot](img/movie-this-mr-nobody.png)
 
 * Example for do-what-it says (Working)
 
-![Screenshot](do-what-it-says.png)
+![Do What it Says Screenshot](img/do-what-it-says.png)
+
+![Spotify This Song Default Screenshot](img/spotify-this-song-default)
 
 ### Link to Video Walkthrough of Liri Bot
 
