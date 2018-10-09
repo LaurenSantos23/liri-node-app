@@ -43,7 +43,7 @@ break;
   case "spotify-this-song":
     if(x){
       spotifySong(x);
-      console.log(x + " this is x");
+      // console.log(x + " this is x");
     } else{
       spotifySong("The Sign");
     }
