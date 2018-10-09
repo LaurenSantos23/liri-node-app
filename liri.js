@@ -146,11 +146,9 @@ function omdbData(movie){
 
   // Need to build my bands in town functions
 
-  // spotify-this-song, and do-what-it-says are working
+  // spotify-this-song, do-what-it-says, movie-this working!!
 
-  //omdb is not working, it loads the mr.nobody message but says error occured
 
-  //not sure why I can't get the code to work for omdb, tutor looked it over and said it was looking good so far
 
 
   
