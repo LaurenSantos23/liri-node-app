@@ -85,7 +85,7 @@ In the command line, you would type: node liri.js and any of the four following 
 
 ![Do What it Says Screenshot](img/do-what-it-says.png)
 
-![Spotify This Song Default Screenshot](img/spotify-this-song-default)
+![Spotify This Song Default Screenshot](img/spotify-this-song-default.png)
 
 ### Link to Video Walkthrough of Liri Bot
 
