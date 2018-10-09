@@ -21,7 +21,7 @@ var nodeArgv = process.argv;
 var command = process.argv[2];
 //movie or song
 var x = "";
-//attaches multiple word arguments
+//attaches multiple word arguments (this mess makes it so we dont have to use parenthesis if query is longer than one word)
 for (var i=3; i<nodeArgv.length; i++){
   if(i>3 && i<nodeArgv.length){
     x = x + "+" + nodeArgv[i];
