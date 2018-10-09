@@ -75,7 +75,7 @@ In the command line, you would type: node liri.js and any of the four following 
 
 * Example for movie-this (Working)'
 
-![Movie This Screenshot](img/movie-this-working.png)
+![Movie This Screenshot](img/movie-this-totoro.png)
 
 * Example for movie-this with no text entered (Working)
 
