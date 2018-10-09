@@ -4,17 +4,13 @@ require("dotenv").config();
 var keys = require("./keys");
 var request = require("request");
 var Spotify = require('node-spotify-api');
-var omdb = require("omdb");
-var bandsInTown = require("bandsInTown")
-var liriBot = process.argv[2]; 
+var bandsInTown = require("mhs-bandsintown");
+let moment = require("moment");
 var fs = require("fs"); //reads and writes files
-queryURL: "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
-var queryUrlOmdb = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
 
 // code to access keys information 
-//made constructiors for my api calls
 var spotify = new Spotify(keys.spotify);
-var omdb = new Omdb(keys.omdb);
+// var omdb = new Omdb(keys.omdb);
 //var bandsInTown = new BandsInTown(keys.bandsInTown);
 
 
