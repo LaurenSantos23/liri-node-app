@@ -95,6 +95,8 @@ function spotifySong(song){
   });
 }
 
+
+
 function omdbData(movie){
   var omdbURL = 'http://www.omdbapi.com/?apikey=trilogy&t=' + movie + '&plot=short&tomatoes=true';
   
@@ -111,20 +113,13 @@ function omdbData(movie){
         console.log("Actors: " + body.Actors);
         console.log("Rotten Tomatoes Rating: " + body.tomatoRating);
         console.log("Rotten Tomatoes URL: " + body.tomatoURL);
-  
-        // //adds text to log.txt
-        // fs.appendFile('log.txt', "Title: " + body.Title);
-        // fs.appendFile('log.txt', "Release Year: " + body.Year);
-        // fs.appendFile('log.txt', "IMdB Rating: " + body.imdbRating);
-        // fs.appendFile('log.txt', "Country: " + body.Country);
-        // fs.appendFile('log.txt', "Language: " + body.Language);
-        // fs.appendFile('log.txt', "Plot: " + body.Plot);
-        // fs.appendFile('log.txt', "Actors: " + body.Actors);
-        // fs.appendFile('log.txt', "Rotten Tomatoes Rating: " + body.tomatoRating);
-        // fs.appendFile('log.txt', "Rotten Tomatoes URL: " + body.tomatoURL);
-  
+
+         //adds text to log.txt
+         appendNewSearch(movie + ", ");
+      
+        
       } else{
-        console.log('Error occurred.')
+        console.log('Error occurred:' + error)
       }
       if(movie === "Mr. Nobody"){
         console.log("-----------------------");
