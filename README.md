@@ -71,14 +71,14 @@ In the command line, you would type: node liri.js and any of the four following 
 * Example for spotify-this-song 'Heartbreak Hotel' (Working)
 ![Screenshot](spotify-this-song.png)
 
-* Example for movie-this (Not Working)'
-![Screenshot](movie-this-not-working.png)
+* Example for movie-this (Working)'
+![Screenshot](movie-this-working.png)
 
 * Example for do-what-it says (Working)
 ![Screenshot](do-what-it-says.png)
 
 * Example for movie-this with no text entered (Working)
-![Screenshot](movie-this-no-text.png)
+![Screenshot](movie-this-mr-nobody.png)
 
 ### Copyright
 Lauren Santosuosso. Copyright 2018. All Rights Reserved.
