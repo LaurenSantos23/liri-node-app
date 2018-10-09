@@ -13,8 +13,8 @@ var fs = require("fs"); //reads and writes files
 // code to access keys information 
 var spotify = new Spotify(keys.spotify);
 var omdbUrl = 'http://www.omdbapi.com/?apikey=trilogy&t=';
-var bandsUrlBase = 'https://rest.bandsintown.com/artists/';
-var bandsUrlEnd = '/events?app_id=codingbootcamp';
+
+
 
 //Stored argument's array
 var nodeArgv = process.argv;
@@ -92,7 +92,7 @@ function spotifySong(song){
 }
 
 function omdbData(movie){
-    var omdbURL = 'http://www.omdbapi.com/?t=' + movie + '&plot=short&tomatoes=true';
+  var omdbURL = 'http://www.omdbapi.com/?apikey=trilogy&t=' + movie + '&plot=short&tomatoes=true';
   
     request(omdbURL, function (error, response, body){
       if(!error && response.statusCode == 200){
@@ -143,6 +143,16 @@ function omdbData(movie){
       spotifySong(txt[1]);
     });
   }
+
+  // Need to build my bands in town functions
+
+  // spotify-this-song, and do-what-it-says are working
+
+  //omdb is not working, it loads the mr.nobody message but says error occured
+
+  //not sure why I can't get the code to work for omdb, tutor looked it over and said it was looking good so far
+
+
   
 
 
