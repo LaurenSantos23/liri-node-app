@@ -13,6 +13,7 @@ var fs = require("fs"); //reads and writes files
 // code to access keys information 
 var spotify = new Spotify(keys.spotify);
 var omdbUrl = 'http://www.omdbapi.com/?apikey=trilogy&t=';
+// var bandTownUrl ="https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
 
 
 
@@ -30,11 +31,10 @@ for (var i=3; i<nodeArgv.length; i++){
   }
 }
 
+
 //switch case 
 //this allows to switch between the four given commands 
 // need to fix this and clean it up, not supposed to have if else statments in this, use dot notation to call on [3] which will be what the user enters for query or prompt
-//switch case 
-//this allows to switch between the four given commands 
 switch(command){
   case "concert-this":
   if(query){
@@ -46,7 +46,6 @@ break;
   case "spotify-this-song":
     if(query){
       spotifySong(query);
-      // console.log(x + " this is x");
     } else{
       spotifySong("The Sign");
     }
@@ -96,6 +95,8 @@ break;
 //   break;
 // }
 
+
+//Adding the append function to log.txt to add prompt aka what user input 
 function appendNewSearch (prompt){
   fs.appendFile('log.txt', prompt, function(error) {
     if (error) {
@@ -103,14 +104,14 @@ function appendNewSearch (prompt){
     }
   });
 }
-
+//Set Default for spotify-this-song to The Sign
 function spotifySong(song){
   if(!song){
     song = "The Sign";
     console.log();
   }
 }
-
+//Spotify Function
 function spotifySong(song){
   spotify.search({ type: 'track', query: song}, function(error, data){
     if(!error){
@@ -133,7 +134,7 @@ function spotifySong(song){
 }
 
 
-
+//OMDB Function 
 function omdbData(movie){
   if(!movie){
     movie = "Mr Nobody";
@@ -170,8 +171,29 @@ function omdbData(movie){
     });
   
 }
-  
 
+// //Bands in Town Function
+// function bandsInTown(artist){
+// var bandTownUrl ="https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
+  
+//     request(bandTownUrl, function (error, response, body){
+//       if(!error && response.statusCode == 200){
+//         var body = JSON.parse(body);
+  
+//         console.log("Venue: " + body.VenueData.name);
+//         console.log("Date & Time: " + body.EventData.dateTime);
+
+//          //adds text to log.txt
+//          appendNewSearch(artist + ", ");
+//       } 
+
+//       else{
+//         console.log('Error occurred:' + error)
+//       }
+//     });
+  
+// }
+//Do what it says function (defaults to I want it that Way for spotify this song)
 function doThing(){
     fs.readFile('random.txt', "utf8", function(error, data){
       var txt = data.split(',');
@@ -180,7 +202,7 @@ function doThing(){
     });
   }
 
-  // Need to build my bands in town functions
+ 
 
 // spotify-this-song, do-what-it-says, movie-this working!!
 
