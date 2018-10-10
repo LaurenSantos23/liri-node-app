@@ -88,6 +88,7 @@ In the command line, you would type: node liri.js and any of the four following 
 ![Spotify This Song Default Screenshot](img/spotify-this-song-default.png)
 
 ### Link to Video Walkthrough of Liri Bot
+https://drive.google.com/file/d/1syUt3NLu5kxhc3RKt88CrbEygJ5e6ksz/view
 
 
 ### Copyright
