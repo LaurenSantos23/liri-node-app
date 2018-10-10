@@ -36,12 +36,16 @@ for (var i=3; i<nodeArgv.length; i++){
 switch(command){
   case "concert-this":
   bandsInTown(process.argv[3]);
-break;
-
-  case "spotify-this-song":
-  spotifySong(process.argv[3]);
   break;
 
+  case "spotify-this-song":
+  if(query){
+  spotifySong(query);
+  } 
+  else{
+  spotifySong("The Sign");
+  }
+  break;
   case "movie-this":
   omdbData(process.argv[3]);
   break;
@@ -66,7 +70,7 @@ function appendNewSearch (prompt){
 function spotifySong(song){
   if(!song){
     song = "The Sign";
-    console.log(song);
+    console.log();
   }
 
 
@@ -129,7 +133,7 @@ function omdbData(movie){
     });
   
   }
-  
+}  
   function doThing(){
     fs.readFile('random.txt', "utf8", function(error, data){
       var txt = data.split(',');
@@ -142,7 +146,7 @@ function omdbData(movie){
 
   // spotify-this-song, do-what-it-says, movie-this working!!
 
-}
+
 
 
   
