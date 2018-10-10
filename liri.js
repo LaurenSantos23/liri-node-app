@@ -33,21 +33,31 @@ for (var i=3; i<nodeArgv.length; i++){
 //switch case 
 //this allows to switch between the four given commands 
 // need to fix this and clean it up, not supposed to have if else statments in this, use dot notation to call on [3] which will be what the user enters for query or prompt
+//switch case 
+//this allows to switch between the four given commands 
 switch(command){
   case "concert-this":
-  bandsInTown(process.argv[3]);
+  if(query){
+    bandsInTown(query);
+  } else{
+    bandsInTown("");
+  }
+break;
+  case "spotify-this-song":
+    if(query){
+      spotifySong(query);
+      // console.log(x + " this is x");
+    } else{
+      spotifySong("The Sign");
+    }
   break;
 
-  case "spotify-this-song":
-  if(query){
-  spotifySong(query);
-  } 
-  else{
-  spotifySong("The Sign");
-  }
-  break;
   case "movie-this":
-  omdbData(process.argv[3]);
+    if(query){
+      omdbData(query)
+    } else{
+      omdbData("Mr. Nobody")
+    }
   break;
 
   case "do-what-it-says":
@@ -58,6 +68,33 @@ switch(command){
     console.log("{Please enter a command: concert-this, spotify-this-song, movie-this, do-what-it-says}");
   break;
 }
+
+
+// switch(command){
+//   case "concert-this":
+//   bandsInTown(process.argv[3]);
+//   break;
+
+//   case "spotify-this-song":
+//   if(query){
+//   spotifySong(query);
+//   } 
+//   else{
+//   spotifySong("The Sign");
+//   }
+//   break;
+//   case "movie-this":
+//   omdbData(process.argv[3]);
+//   break;
+
+//   case "do-what-it-says":
+//     doThing();
+//   break;
+
+//   default:
+//     console.log("{Please enter a command: concert-this, spotify-this-song, movie-this, do-what-it-says}");
+//   break;
+// }
 
 function appendNewSearch (prompt){
   fs.appendFile('log.txt', prompt, function(error) {
@@ -72,7 +109,7 @@ function spotifySong(song){
     song = "The Sign";
     console.log();
   }
-
+}
 
 function spotifySong(song){
   spotify.search({ type: 'track', query: song}, function(error, data){
@@ -133,7 +170,7 @@ function omdbData(movie){
     });
   
   }
-}  
+  
   function doThing(){
     fs.readFile('random.txt', "utf8", function(error, data){
       var txt = data.split(',');
@@ -144,7 +181,7 @@ function omdbData(movie){
 
   // Need to build my bands in town functions
 
-  // spotify-this-song, do-what-it-says, movie-this working!!
+// spotify-this-song, do-what-it-says, movie-this working!!
 
 
 
