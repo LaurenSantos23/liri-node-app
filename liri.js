@@ -32,29 +32,18 @@ for (var i=3; i<nodeArgv.length; i++){
 
 //switch case 
 //this allows to switch between the four given commands 
+// need to fix this and clean it up, not supposed to have if else statments in this, use dot notation to call on [3] which will be what the user enters for query or prompt
 switch(command){
   case "concert-this":
-  if(query){
-    bandsInTown(query);
-  } else{
-    bandsInTown("");
-  }
+  bandsInTown(process.argv[3]);
 break;
+
   case "spotify-this-song":
-    if(query){
-      spotifySong(query);
-      // console.log(x + " this is x");
-    } else{
-      spotifySong("The Sign");
-    }
+  spotifySong(process.argv[3]);
   break;
 
   case "movie-this":
-    if(query){
-      omdbData(query)
-    } else{
-      omdbData("Mr. Nobody")
-    }
+  omdbData(process.argv[3]);
   break;
 
   case "do-what-it-says":
@@ -75,6 +64,13 @@ function appendNewSearch (prompt){
 }
 
 function spotifySong(song){
+  if(!song){
+    song = "The Sign";
+    console.log(song);
+  }
+
+
+function spotifySong(song){
   spotify.search({ type: 'track', query: song}, function(error, data){
     if(!error){
       for(var i = 0; i < data.tracks.items.length; i++){
@@ -87,7 +83,7 @@ function spotifySong(song){
         
         //adds text to log.txt
         appendNewSearch(song + ", ");
-
+        
       }
     } else{
       console.log('Error occurred: ' + error);
@@ -98,6 +94,15 @@ function spotifySong(song){
 
 
 function omdbData(movie){
+  if(!movie){
+    movie = "Mr Nobody";
+    console.log(movie);
+    console.log("-----------------------");
+    console.log("If you haven't watched 'Mr. Nobody,' then you should: http://www.imdb.com/title/tt0485947/");
+    console.log("It's on Netflix!");
+  
+  
+  }
   var omdbURL = 'http://www.omdbapi.com/?apikey=trilogy&t=' + movie + '&plot=short&tomatoes=true';
   
     request(omdbURL, function (error, response, body){
@@ -121,13 +126,6 @@ function omdbData(movie){
       } else{
         console.log('Error occurred:' + error)
       }
-      if(movie === "Mr. Nobody"){
-        console.log("-----------------------");
-        console.log("If you haven't watched 'Mr. Nobody,' then you should: http://www.imdb.com/title/tt0485947/");
-        console.log("It's on Netflix!");
-  
-    
-      }
     });
   
   }
@@ -144,11 +142,10 @@ function omdbData(movie){
 
   // spotify-this-song, do-what-it-says, movie-this working!!
 
-
+}
 
 
   
-
 
 
 
