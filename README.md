@@ -69,7 +69,7 @@ In the command line, you would type: node liri.js and any of the four following 
 		
 ### Screenshots of Code (Working and Not Working examples)
 
-* Example for spotify-this-song 'Heartbreak Hotel' (Working)
+* Example for spotify-this-song 'Umbrella' (Working)
 
 ![Spotify This Song Screenshot](img/spotify-this-song.png)
 
