@@ -20,13 +20,13 @@ var omdbUrl = 'http://www.omdbapi.com/?apikey=trilogy&t=';
 var nodeArgv = process.argv;
 var command = process.argv[2];
 //movie or song
-var x = "";
+var query = "";
 //attaches multiple word arguments (this mess makes it so we dont have to use parenthesis if query is longer than one word)
 for (var i=3; i<nodeArgv.length; i++){
   if(i>3 && i<nodeArgv.length){
-    x = x + "+" + nodeArgv[i];
+    query = query + "+" + nodeArgv[i];
   } else{
-    x = x + nodeArgv[i];
+    query = query + nodeArgv[i];
   }
 }
 
@@ -34,15 +34,15 @@ for (var i=3; i<nodeArgv.length; i++){
 //this allows to switch between the four given commands 
 switch(command){
   case "concert-this":
-  if(x){
-    bandsInTown(x);
+  if(query){
+    bandsInTown(query);
   } else{
     bandsInTown("");
   }
 break;
   case "spotify-this-song":
-    if(x){
-      spotifySong(x);
+    if(query){
+      spotifySong(query);
       // console.log(x + " this is x");
     } else{
       spotifySong("The Sign");
@@ -50,8 +50,8 @@ break;
   break;
 
   case "movie-this":
-    if(x){
-      omdbData(x)
+    if(query){
+      omdbData(query)
     } else{
       omdbData("Mr. Nobody")
     }
