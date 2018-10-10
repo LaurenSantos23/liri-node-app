@@ -193,6 +193,8 @@ function omdbData(movie){
 //     });
   
 // }
+
+
 //Do what it says function (defaults to I want it that Way for spotify this song)
 function doThing(){
     fs.readFile('random.txt', "utf8", function(error, data){
