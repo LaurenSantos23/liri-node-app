@@ -37,12 +37,8 @@ for (var i=3; i<nodeArgv.length; i++){
 // need to fix this and clean it up, not supposed to have if else statments in this, use dot notation to call on [3] which will be what the user enters for query or prompt
 switch(command){
   case "concert-this":
-  if(query){
-    bandsInTown(query);
-  } else{
-    bandsInTown("");
-  }
-break;
+    bands(query);
+  break;
   case "spotify-this-song":
     if(query){
       spotifySong(query);
@@ -170,29 +166,33 @@ function omdbData(movie){
       }
     });
   
-}
+};
 
-// //Bands in Town Function
-// function bandsInTown(artist){
-// var bandTownUrl ="https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
-  
-//     request(bandTownUrl, function (error, response, body){
-//       if(!error && response.statusCode == 200){
-//         var body = JSON.parse(body);
-  
-//         console.log("Venue: " + body.VenueData.name);
-//         console.log("Date & Time: " + body.EventData.dateTime);
+ //Bands in Town Function
+ function bands(artist){
+   if(!artist){
+     artist = "Justin Timberlake";
+   }
 
-//          //adds text to log.txt
-//          appendNewSearch(artist + ", ");
-//       } 
-
-//       else{
-//         console.log('Error occurred:' + error)
-//       }
-//     });
+    var bandTownUrl ="https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
   
-// }
+    request(bandTownUrl, function (error, response, body){
+       if(!error && response.statusCode == 200){
+        var bodyObject = JSON.parse(body);
+  
+        console.log("Venue: " + bodyObject.VenueData);
+//console.log("Date & Time: " + body.EventData.dateTime);
+
+         //adds text to log.txt
+         appendNewSearch(artist + ", ");
+      } 
+
+       else{
+        console.log('Error occurred:' + error)
+      }
+     });
+  
+ }
 
 
 //Do what it says function (defaults to I want it that Way for spotify this song)
