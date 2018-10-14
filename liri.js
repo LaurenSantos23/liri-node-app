@@ -13,8 +13,6 @@ var fs = require("fs"); //reads and writes files
 // code to access keys information 
 var spotify = new Spotify(keys.spotify);
 var omdbUrl = 'http://www.omdbapi.com/?apikey=trilogy&t=';
-// var bandTownUrl ="https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
-
 
 
 //Stored argument's array
@@ -170,6 +168,7 @@ function omdbData(movie){
 
  //Bands in Town Function
  function bands(artist){
+   //added some code to remove white space in string for user prompt
    artist = artist.replace(/\s/g,'');
    if(!artist){
      artist = "JustinTimberlake";
