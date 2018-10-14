@@ -20,6 +20,7 @@ var omdbUrl = 'http://www.omdbapi.com/?apikey=trilogy&t=';
 //Stored argument's array
 var nodeArgv = process.argv;
 var command = process.argv[2];
+var bandsName = process.argv[3];
 //movie or song
 var query = "";
 //attaches multiple word arguments (this mess makes it so we dont have to use parenthesis if query is longer than one word)
@@ -36,8 +37,8 @@ for (var i=3; i<nodeArgv.length; i++){
 //this allows to switch between the four given commands 
 // need to fix this and clean it up, not supposed to have if else statments in this, use dot notation to call on [3] which will be what the user enters for query or prompt
 switch(command){
-  case "concert-this":
-    bands(query);
+    case "concert-this":
+  bands(process.argv[3]);
   break;
   case "spotify-this-song":
     if(query){
@@ -170,18 +171,24 @@ function omdbData(movie){
 
  //Bands in Town Function
  function bands(artist){
+   artist = artist.replace(/\s/g,'');
    if(!artist){
-     artist = "Justin Timberlake";
+     artist = "JustinTimberlake";
    }
 
-    var bandTownUrl ="https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
-  
+    var bandTownUrl ="https://rest.bandsintown.com/artists/"+artist+"/events?app_id=codingbootcamp";
+   //console.log(bandTownUrl);
     request(bandTownUrl, function (error, response, body){
        if(!error && response.statusCode == 200){
         var bodyObject = JSON.parse(body);
   
-        console.log("Venue: " + bodyObject.VenueData);
-//console.log("Date & Time: " + body.EventData.dateTime);
+
+        for(var i = 0; i< bodyObject.length; i++) {
+          console.log("Venue Name: " + bodyObject[i].venue.name);
+        console.log("Show Date/Time: " + bodyObject[i].datetime);
+        console.log("*************");
+        }
+
 
          //adds text to log.txt
          appendNewSearch(artist + ", ");
