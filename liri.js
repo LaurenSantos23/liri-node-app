@@ -174,7 +174,7 @@ function omdbData(movie){
    if(!artist){
      artist = "JustinTimberlake";
    }
-
+   // prompt has to be in a string now, want to add the code that attaches multiple word arguments
     var bandTownUrl ="https://rest.bandsintown.com/artists/"+artist+"/events?app_id=codingbootcamp";
    //console.log(bandTownUrl);
     request(bandTownUrl, function (error, response, body){
