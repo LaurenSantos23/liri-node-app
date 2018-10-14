@@ -21,6 +21,7 @@ var command = process.argv[2];
 //movie or song
 var query = "";
 //attaches multiple word arguments (this mess makes it so we dont have to use parenthesis if query is longer than one word)
+//not working for the bands in town function because I use query and not 
 for (var i=3; i<nodeArgv.length; i++){
   if(i>3 && i<nodeArgv.length){
     query = query + "+" + nodeArgv[i];
@@ -34,9 +35,11 @@ for (var i=3; i<nodeArgv.length; i++){
 //this allows to switch between the four given commands 
 // need to fix this and clean it up, not supposed to have if else statments in this, use dot notation to call on [3] which will be what the user enters for query or prompt
 switch(command){
+
     case "concert-this":
   bands(process.argv[3]);
   break;
+
   case "spotify-this-song":
     if(query){
       spotifySong(query);
@@ -63,31 +66,6 @@ switch(command){
 }
 
 
-// switch(command){
-//   case "concert-this":
-//   bandsInTown(process.argv[3]);
-//   break;
-
-//   case "spotify-this-song":
-//   if(query){
-//   spotifySong(query);
-//   } 
-//   else{
-//   spotifySong("The Sign");
-//   }
-//   break;
-//   case "movie-this":
-//   omdbData(process.argv[3]);
-//   break;
-
-//   case "do-what-it-says":
-//     doThing();
-//   break;
-
-//   default:
-//     console.log("{Please enter a command: concert-this, spotify-this-song, movie-this, do-what-it-says}");
-//   break;
-// }
 
 
 //Adding the append function to log.txt to add prompt aka what user input 
@@ -115,7 +93,7 @@ function spotifySong(song){
         console.log("Song: " + songData.name);
         console.log("Preview URL: " + songData.preview_url);
         console.log("Album: " + songData.album.name);
-        console.log("-----------------------");
+        console.log("*************");
         
         //adds text to log.txt
         appendNewSearch(song + ", ");
@@ -133,7 +111,7 @@ function omdbData(movie){
   if(!movie){
     movie = "Mr Nobody";
     console.log(movie);
-    console.log("-----------------------");
+    console.log("*************");
     console.log("If you haven't watched 'Mr. Nobody,' then you should: http://www.imdb.com/title/tt0485947/");
     console.log("It's on Netflix!");
   
@@ -154,6 +132,7 @@ function omdbData(movie){
         console.log("Actors: " + body.Actors);
         console.log("Rotten Tomatoes Rating: " + body.tomatoRating);
         console.log("Rotten Tomatoes URL: " + body.tomatoURL);
+        console.log("*************");
 
          //adds text to log.txt
          appendNewSearch(movie + ", ");
@@ -168,7 +147,7 @@ function omdbData(movie){
 
  //Bands in Town Function
  function bands(artist){
-   //added some code to remove white space in string for user prompt
+   //added some code to remove white space in string for user prompt aka string replace
    artist = artist.replace(/\s/g,'');
    if(!artist){
      artist = "JustinTimberlake";
@@ -207,14 +186,15 @@ function omdbData(movie){
 function doThing(){
     fs.readFile('random.txt', "utf8", function(error, data){
       var txt = data.split(',');
-  
+  //sending prompt responses to text log file
       spotifySong(txt[1]);
     });
   }
 
  
 
-// spotify-this-song, do-what-it-says, movie-this working!!
+// spotify-this-song, do-what-it-says, movie-this working and concert-this are all working!!
+
 
 
 
