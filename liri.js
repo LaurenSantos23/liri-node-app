@@ -20,7 +20,6 @@ var omdbUrl = 'http://www.omdbapi.com/?apikey=trilogy&t=';
 //Stored argument's array
 var nodeArgv = process.argv;
 var command = process.argv[2];
-var bandsName = process.argv[3];
 //movie or song
 var query = "";
 //attaches multiple word arguments (this mess makes it so we dont have to use parenthesis if query is longer than one word)
