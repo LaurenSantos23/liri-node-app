@@ -184,8 +184,11 @@ function omdbData(movie){
 
         for(var i = 0; i< bodyObject.length; i++) {
           console.log("Venue Name: " + bodyObject[i].venue.name);
-        console.log("Show Date/Time: " + bodyObject[i].datetime);
-        console.log("*************");
+          console.log("Venue Region: " + bodyObject[i].venue.region);  
+          console.log("Venue City: " + bodyObject[i].venue.city);  
+          console.log("Show Date/Time: " + bodyObject[i].datetime);
+          console.log("Show Info URL: " + bodyObject[i].url); 
+          console.log("*************");
         }
 
 
