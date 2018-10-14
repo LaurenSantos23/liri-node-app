@@ -161,6 +161,7 @@ function omdbData(movie){
   
 
         for(var i = 0; i< bodyObject.length; i++) {
+        //  console.log("Artist Name:" + bodyObject[i]artists.name);
           console.log("Venue Name: " + bodyObject[i].venue.name);
           console.log("Venue Region: " + bodyObject[i].venue.region);  
           console.log("Venue City: " + bodyObject[i].venue.city);  
