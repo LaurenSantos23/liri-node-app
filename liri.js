@@ -61,7 +61,7 @@ switch(command){
   break;
 
   default:
-    console.log("{Please enter a command: concert-this, spotify-this-song, movie-this, do-what-it-says}");
+    console.log("{Please enter a command: concert-this 'artist name', spotify-this-song, movie-this, do-what-it-says}");
   break;
 }
 
