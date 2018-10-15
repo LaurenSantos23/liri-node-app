@@ -2,9 +2,9 @@
 
 <p>LIRI is a Language Interpretation and Recognition Interface. LIRI is a command line node app that takes in parameters and gives you back data.<p>
 
-LIRI uses the following NPM Packages and API's:
+LIRI uses the following NPM Packages:
 
-- <a href="http://www.artists.bandsintown.com/bandsintown-api" rel="link">Bands in Town</a>
+- <a href="http://www.npmjs.com/package/mhs-bandsintown" rel="link">Bands in Town</a>
 - <a href="https://www.npmjs.com/package/spotify" rel="link">Spotify API</a>
 - <a href="https://www.npmjs.com/package/request" rel="nofollow">Request</a>
 - <a href="https://www.npmjs.com/package/moment" rel="link"> Moment</a>
