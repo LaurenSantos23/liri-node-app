@@ -21,7 +21,7 @@ LIRI uses the following NPM Packages:
   
 ### LIRI Commands
 In the command line, you would type: node liri.js and any of the four following commands:
-- concert-this <artist/band name here> 
+- concert-this 'artist/band name here'
 - spotify-this-song <song name here>
 - movie-this <movie name here>
 - do-what-it-says
@@ -31,8 +31,10 @@ In the command line, you would type: node liri.js and any of the four following 
 
 	* This will search the Bands in Town API for an artist and returns: 
 		* Name of Venue
-		* Location 
-		* Date of Concert
+		* Venue Region
+		* Venue City
+		* Show Time/Date
+		* Show Info URL
 
 2. `node liri.js spotify-this-song '<song name here>'`
 
@@ -67,31 +69,34 @@ In the command line, you would type: node liri.js and any of the four following 
 	* Using the `fs` Node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
 		* It should run `spotify-this-song` for "I Want it That Way," as follows the text in `random.txt`.
 		
-### Screenshots of Code (Working and Not Working examples)
+### Screenshots of Code (Working Examples)
 
-* Example for spotify-this-song 'Umbrella' (Working)
+* Example for spotify-this-song 'Umbrella' 
 
 ![Spotify This Song Screenshot](img/spotify-this-song.png)
 
-* Example for movie-this (Working)'
-
-![Movie This Screenshot](img/movie-this-totoro.png)
-
-* Example for movie-this with no text entered (Working)
-
-![Movie This Default Screenshot](img/movie-this-mr-nobody.png)
-
-* Example for do-what-it says (Working)
-
-![Do What it Says Screenshot](img/do-what-it-says.png)
+* Example for spotify-this-song with no text added 
 
 ![Spotify This Song Default Screenshot](img/spotify-this-song-default.png)
 
-* Example of concert-this (Working)
-![Concert This Screenshot] (img/concert-this-working.png)
+* Example for movie-this 
+
+![Movie This Screenshot](img/movie-this-totoro.png)
+
+* Example for movie-this with no text entered 
+
+![Movie This Default Screenshot](img/movie-this-mr-nobody.png)
+
+* Example for do-what-it says 
+
+![Do What it Says Screenshot](img/do-what-it-says.png)
+
+* Example of concert-this 
+
+![Concert This Screenshot](img/bands-in-town-working.png)
 
 ### Link to Video Walkthrough of Liri Bot
-https://drive.google.com/file/d/1syUt3NLu5kxhc3RKt88CrbEygJ5e6ksz/view
+https://drive.google.com/file/d/1Vet09Q-XIPVcQ38aPPafVFylfO7G46qJ/view
 
 
 ### Copyright
