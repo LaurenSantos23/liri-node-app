@@ -96,7 +96,7 @@ In the command line, you would type: node liri.js and any of the four following 
 ![Concert This Screenshot](img/bands-in-town-working.png)
 
 ### Link to Video Walkthrough of Liri Bot
-https://drive.google.com/file/d/1syUt3NLu5kxhc3RKt88CrbEygJ5e6ksz/view
+https://drive.google.com/file/d/1Vet09Q-XIPVcQ38aPPafVFylfO7G46qJ/view
 
 
 ### Copyright
